@@ -22,8 +22,8 @@ function showMessage(){
         let success = document.querySelector("#none");
         let btnDismiss = document.querySelector("#message button");
         btnDismiss.addEventListener("click",dismiss);
-        success.style.zIndex="1000";
-        content.style.opacity="0";
+        success.style.display="flex";
+        content.style.display="none";
     }
     else{
         let label = document.querySelector("label");
@@ -38,6 +38,6 @@ function showMessage(){
 function dismiss(){
     let success = document.querySelector("#none");
     let btnDismiss = document.querySelector("#message button");
-    success.style.zIndex="-1000";
-    content.style.opacity="1";
+    success.style.display="none";
+    content.style.display="flex";
 }
