@@ -21,6 +21,9 @@ function showMessage(){
     if(valid=="yes"){
         let success = document.querySelector("#none");
         let btnDismiss = document.querySelector("#message button");
+        let userEmail = document.querySelector("span");
+        userEmail.innerHTML=form.value;
+        userEmail.style.fontWeight="900";
         btnDismiss.addEventListener("click",dismiss);
         success.style.display="flex";
         content.style.display="none";
