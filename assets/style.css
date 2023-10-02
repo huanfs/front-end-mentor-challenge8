@@ -55,7 +55,18 @@ form label{
     justify-content:space-between;
     margin-bottom:10px;
 }
+@keyframes fade{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
 label span{
+    animation-name:fade;
+    animation-duration:5s;
+    animation-iteration-count:1;
     color:rgb(253, 7, 7);
 }
 /*input email*/

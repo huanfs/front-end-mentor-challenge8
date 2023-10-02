@@ -4,10 +4,10 @@ let button = document.querySelector("button");//button 'send'
 let valid = "";//valid for check users email's valid or not
 button.addEventListener("click",submit);
 button.addEventListener("click",showMessage);
-//create an array of strings and check, if they have @=yes,else @=not 
+//create an array of strings and check, if their have @=yes,else @=not 
 function submit(){
     let user = form.value.split("");
-    if(user.includes("@")){
+    if(user.includes("@")&&user.includes(".")){
         valid="yes";
     }
     else{
@@ -35,7 +35,11 @@ function showMessage(){
         label2.innerHTML="valid email required";
         form.style.color="red";
         form.style.borderColor="red";
+        setTimeout((x)=>{
+            label2.remove();
+        },5000)
     }
+
 }
 //after success check, dismiss the message and turn main
 function dismiss(){
